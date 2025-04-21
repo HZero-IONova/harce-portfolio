@@ -1,17 +1,26 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
+/*------------------------------------------------------------------
+  1.  CONFIG RESEND
+-------------------------------------------------------------------*/
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
+/*------------------------------------------------------------------
+  2.  MAPA DE SERVICIOS (código → etiqueta legible)
+-------------------------------------------------------------------*/
 const SERVICE_LABELS: Record<string, string> = {
-  portfolio: "Web Portfolio / Landing Page",
-  pplatform: "Microsoft Power Platform",
-  ecommerce: "E‑commerce Site",
+  portfolio: "Web Portfolio / Landing Page",
+  pplatform: "Microsoft Power Platform",
+  ecommerce: "E‑commerce Site",
 };
 
-/** Construye el HTML del correo */
-function buildHtml(d: Record<string, string>) {
+/*------------------------------------------------------------------
+  3.  FUNCIÓN buildHtml: devuelve todo el email con estilos inline
+-------------------------------------------------------------------*/
+function buildHtml(d: Record<string, string>): string {
   const niceService = SERVICE_LABELS[d.service] || "Sin especificar";
+
   return `
   <div style="background:#f4f7fa;padding:40px 0;font-family:Arial,Helvetica,sans-serif;">
     <table align="center" cellpadding="0" cellspacing="0" width="600"
@@ -19,7 +28,7 @@ function buildHtml(d: Record<string, string>) {
                   overflow:hidden;border-collapse:separate;">
       <tr>
         <td style="background:#127bcb;padding:24px;text-align:center;">
-          <h1 style="color:#ffffff;font-size:24px;margin:0;">🚀 ¡Nuevo lead recibido!</h1>
+          <h1 style="color:#ffffff;font-size:24px;margin:0;">🚀 ¡Nuevo lead recibido!</h1>
         </td>
       </tr>
 
@@ -61,7 +70,8 @@ function buildHtml(d: Record<string, string>) {
 
       <tr>
         <td style="background:#f1f1f1;text-align:center;padding:16px;font-size:12px;color:#777;">
-          Portafolio de Hiram Arce · <a href="https://ionova.io" style="color:#127bcb;text-decoration:none;">ionova.io</a>
+          Portafolio de Hiram Arce ·
+          <a href="https://ionova.io" style="color:#127bcb;text-decoration:none;">ionova.io</a>
         </td>
       </tr>
     </table>
@@ -69,25 +79,28 @@ function buildHtml(d: Record<string, string>) {
   `;
 }
 
-/** Handler principal: exporta POST para que lo re‑use el wrapper */
+/*------------------------------------------------------------------
+  4.  HANDLER  POST  (se re‑exportará desde app/api/contact/route.ts)
+-------------------------------------------------------------------*/
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
 
-    // Validación rápida
+    // Validación mínima
     if (!data?.email || !data?.message) {
       return NextResponse.json({ error: "Missing fields" }, { status: 422 });
     }
 
-    // Enviar correo
-    await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL!,
-      to: process.env.RESEND_TO_EMAIL!,
+    /*----------------------  Enviar email con Resend  ----------------------*/
+    const res = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL!, // p. ej. onboarding@resend.dev
+      to: process.env.RESEND_TO_EMAIL!, // tu bandeja personal
       subject: `Nuevo mensaje de ${data.firstName || "un visitante"}`,
       html: buildHtml(data),
-      replyTo: data.email, // ✅ camelCase
+      replyTo: data.email, // para que puedas responder
     });
 
+    console.log("RESEND →", res); // útil para depurar en producción
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("CONTACT_ROUTE_ERROR →", err);
