@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -16,10 +18,6 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
-
-export const metadata = {
-  title: "Work | Hiram Arce",
-};
 
 const projects = [
   {

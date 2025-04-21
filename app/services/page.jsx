@@ -3,10 +3,6 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Services | Hiram Arce",
-};
-
 const services = [
   {
     num: "01",

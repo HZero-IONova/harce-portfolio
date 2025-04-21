@@ -13,10 +13,6 @@ import {
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-export const metadata = {
-  title: "Resume | Hiram Arce",
-};
-
 //about data
 const about = {
   title: "About Me",
