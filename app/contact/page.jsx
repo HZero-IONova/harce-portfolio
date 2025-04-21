@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -29,10 +31,6 @@ const initialForm = {
   phone: "",
   service: "",
   message: "",
-};
-
-export const metadata = {
-  title: "Contact | Hiram Arce",
 };
 
 export default function ContactPage() {
