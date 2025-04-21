@@ -33,6 +33,10 @@ const initialForm = {
   message: "",
 };
 
+export const metadata = {
+  title: "Contact | Hiram Arce",
+};
+
 export default function ContactPage() {
   const [form, setForm] = useState(initialForm);
   const [loading, setLoading] = useState(false);

@@ -19,6 +19,10 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
+export const metadata = {
+  title: "Work | Hiram Arce",
+};
+
 const projects = [
   {
     num: "01",
