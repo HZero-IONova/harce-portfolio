@@ -71,7 +71,7 @@ function buildHtml(d: Record<string, string>): string {
       <tr>
         <td style="background:#f1f1f1;text-align:center;padding:16px;font-size:12px;color:#777;">
           Portafolio de Hiram Arce ·
-          <a href="https://ionova.io" style="color:#127bcb;text-decoration:none;">ionova.io</a>
+          <a href="https://harce-portfolio.vercel.app/" style="color:#127bcb;text-decoration:none;">Hiram Arce-Portfolio</a>
         </td>
       </tr>
     </table>
