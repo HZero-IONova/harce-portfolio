@@ -27,6 +27,7 @@
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -46,7 +47,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1200px;
-} 
+}
 
 :root {
   --radius: 0.625rem;
@@ -64,7 +65,7 @@
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.87 0.0877 60.68);
   /*--accent: oklch(0.7 0.1 189);*/
-  --accent-hover: oklch(0.984 0.003 247.858);
+  --accent-hover: oklch(0.78 0.12 60.68);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
@@ -122,6 +123,11 @@
   padding: 15px;
 }
 
+@layer utilities {
+  @variants group-hover {
+  }
+}
+
 @layer base {
   body {
     @apply font-primary bg-primary text-white leading-loose;
@@ -134,5 +140,14 @@
   }
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .group:hover .group-hover-text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--accent);
   }
 }
