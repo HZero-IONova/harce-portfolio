@@ -20,25 +20,25 @@ import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
+  // {
+  //   num: "01",
+  //   category: "Web-Portfolio",
+  //   title: "Hiram Arce Portfolio",
+  //   description:
+  //     "This very portfolio is both a canvas and a case study—conceived, designed, and engineered entirely in‑house to demonstrate my end‑to‑end craft. From information architecture to pixel‑perfect UI and high‑performance code, every detail showcases the same standards I apply to client projects: clean design, scalable architecture, and measurable user impact.",
+  //   stack: [
+  //     { name: "Next.js" },
+  //     { name: "Html 5" },
+  //     { name: "Css 3" },
+  //     { name: "Tailwind" },
+  //     { name: "Framer" },
+  //   ],
+  //   image: "/assets/work/MyPortfolio.png",
+  //   live: "",
+  //   github: "",
+  // },
   {
     num: "01",
-    category: "Web-Portfolio",
-    title: "Hiram Arce Portfolio",
-    description:
-      "This very portfolio is both a canvas and a case study—conceived, designed, and engineered entirely in‑house to demonstrate my end‑to‑end craft. From information architecture to pixel‑perfect UI and high‑performance code, every detail showcases the same standards I apply to client projects: clean design, scalable architecture, and measurable user impact.",
-    stack: [
-      { name: "Next.js" },
-      { name: "Html 5" },
-      { name: "Css 3" },
-      { name: "Tailwind" },
-      { name: "Framer" },
-    ],
-    image: "/assets/work/MyPortfolio.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "02",
     category: "Landing Page",
     title: "IONova Page",
     description:
