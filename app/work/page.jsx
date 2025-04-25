@@ -20,23 +20,6 @@ import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
-  // {
-  //   num: "01",
-  //   category: "Web-Portfolio",
-  //   title: "Hiram Arce Portfolio",
-  //   description:
-  //     "This very portfolio is both a canvas and a case study—conceived, designed, and engineered entirely in‑house to demonstrate my end‑to‑end craft. From information architecture to pixel‑perfect UI and high‑performance code, every detail showcases the same standards I apply to client projects: clean design, scalable architecture, and measurable user impact.",
-  //   stack: [
-  //     { name: "Next.js" },
-  //     { name: "Html 5" },
-  //     { name: "Css 3" },
-  //     { name: "Tailwind" },
-  //     { name: "Framer" },
-  //   ],
-  //   image: "/assets/work/MyPortfolio.png",
-  //   live: "",
-  //   github: "",
-  // },
   {
     num: "01",
     category: "Landing Page",
@@ -51,6 +34,22 @@ const projects = [
       { name: "Framer" },
     ],
     image: "/assets/work/IonovaPortfolio.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "02",
+    category: "Web Page",
+    title: "Landing Page / Payment Integration",
+    description:
+      "A fully in-house case study—planned, designed, and engineered end-to-end to demonstrate my delivery standards. From clear information architecture and pixel-perfect UI to scalable, high-performance code, every detail reflects a commitment to clean design, robust architecture, and measurable user impact.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Python" },
+      { name: "SQL" },
+    ],
+    image: "/assets/work/Cespte.png",
     live: "",
     github: "",
   },
