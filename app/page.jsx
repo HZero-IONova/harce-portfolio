@@ -21,10 +21,9 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent">Hiram Arce</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Seasoned Tech Leader specializing in high-impact software
-              development, automation, and digital transformation, aligning
-              strategic objectives to deliver measurable results and sustainable
-              growth.
+              Seasoned technologist who drives high-impact software development,
+              automation, and digital transformation—seamlessly uniting strategy
+              and execution to spark measurable results and sustainable growth.
             </p>
             {/** button & socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
