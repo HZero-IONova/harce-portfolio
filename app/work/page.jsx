@@ -25,7 +25,7 @@ const projects = [
     category: "Landing Page",
     title: "IONova Page",
     description:
-      "I designed and engineered IONova’s flagship landing page to embody the brand’s “Ignite. Empower. Achieve.” ethos while driving measurable conversions. Built on Next.js 19 with Tailwind CSS 4, the page delivers sub‑second load times, a 100 / 100 Lighthouse score, and seamless responsiveness across devices. A bold hero section, animated feature grid, and frictionless call‑to‑action funnel visitors from curiosity to commitment, boosting qualified leads by 30 % in the first month.",
+      "I designed and engineered IONova’s flagship landing page to embody the brand’s “Ignite. Empower. Achieve.” ethos while driving measurable conversions. The page delivers sub‑second load times, a 100 / 100 Lighthouse score, and seamless responsiveness across devices. A bold hero section, animated feature grid, and frictionless call‑to‑action funnel visitors from curiosity to commitment, boosting qualified leads by 30 % in the first month.",
     stack: [
       { name: "Next.js" },
       { name: "Html 5" },
