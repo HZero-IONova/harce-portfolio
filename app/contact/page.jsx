@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ButtonForm from "@/components/ButtonForm";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,6 @@ import {
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-/* --- Información lateral --- */
 const info = [
   { icon: <FaPhoneAlt />, title: "Phone", description: "(+52) 665 104 1623" },
   { icon: <FaEnvelope />, title: "Email", description: "rh.arce@outlook.com" },
@@ -27,19 +27,19 @@ const info = [
   },
 ];
 
-/* --- Estado inicial formulario --- */
 const initialForm = {
   firstName: "",
   lastName: "",
   email: "",
   phone: "",
   service: "",
-  message: "",
+  pain: "",
 };
 
 export default function ContactPage() {
   const [form, setForm] = useState(initialForm);
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -48,15 +48,37 @@ export default function ContactPage() {
     e.preventDefault();
     setLoading(true);
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    try {
+      await fetch(
+        "https://hook.us2.make.com/7o9pix8jaozwew1ju39jntekyvc6n4kh",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName: form.firstName,
+            lastName: form.lastName,
+            email: form.email,
+            phone: form.phone,
+            service: form.service,
+            pain: form.pain,
+            date: new Date().toISOString(),
+            status: "New",
+            messageAI: "",
+            messageSent: false,
+          }),
+        }
+      );
 
-    setLoading(false);
-    alert(res.ok ? "¡Message Sent! 🙌" : "There was an error 😞");
-    if (res.ok) setForm(initialForm);
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
+      setTimeout(() => {
+        setSubmitted(false);
+        setForm(initialForm);
+      }, 3000);
+    }
   };
 
   return (
@@ -80,7 +102,7 @@ export default function ContactPage() {
 
               <p className="text-white/60">
                 Have a bold idea or a complex challenge? Let’s Architect the
-                Solution and release your Momentum—together..
+                Solution and release your Momentum—together.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -112,33 +134,47 @@ export default function ContactPage() {
               </div>
 
               <Select onValueChange={(v) => setForm({ ...form, service: v })}>
-                {/* <SelectValue placeholder="Select a service"></SelectValue> */}
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="landingpage">Landing Page</SelectItem>
-                  <SelectItem value="aiautomation">
+                  <SelectItem value="Landing Page">Landing Page</SelectItem>
+                  <SelectItem value="AI Automation">
                     Business Powered Automations
                   </SelectItem>
-                  <SelectItem value="ecommerce">E‑commerce Site</SelectItem>
-                  <SelectItem value="strategicadvisory">
+                  <SelectItem value="E-commerce">E‑commerce Site</SelectItem>
+                  <SelectItem value="Strategic Advisory">
                     Strategic Tech Advisory
                   </SelectItem>
                 </SelectContent>
               </Select>
 
               <Textarea
-                name="message"
+                name="pain"
                 className="h-[90px]"
                 placeholder="Tell me about your pain… We will Fix them."
-                value={form.message}
+                value={form.pain}
                 onChange={handleChange}
               />
 
-              <Button type="submit" disabled={loading} className="max-w-40">
-                {loading ? "Sending…" : "Send message"}
-              </Button>
+              <div className="w-full flex flex-col items-center mt-2 space-y-2 md:space-y-4">
+                <ButtonForm
+                  text={
+                    loading
+                      ? "Sending..."
+                      : submitted
+                        ? "Done Deal!"
+                        : "Send Message"
+                  }
+                  disabled={loading || submitted}
+                  success={submitted}
+                />
+                {submitted && (
+                  <p className="text-green-400 text-sm text-center animate-fadeIn">
+                    We will contact you soon.
+                  </p>
+                )}
+              </div>
             </form>
           </div>
 
@@ -149,8 +185,8 @@ export default function ContactPage() {
                 <li key={i} className="flex items-center gap-6">
                   <div
                     className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px]
-                                  bg-[#27272c] text-accent rounded-md
-                                  flex items-center justify-center"
+                      bg-[#27272c] text-accent rounded-md
+                      flex items-center justify-center"
                   >
                     <div className="text-[28px]">{item.icon}</div>
                   </div>
