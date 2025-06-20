@@ -17,7 +17,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About Me",
   description:
-    "Seasoned Tech Leader specializing in high-impact software development, automation, and digital transformation, aligning strategic objectives to deliver measurable results and sustainable growth.",
+    "Tech Leader focused on building High-Impact Software and Intelligent Automation that drive growth, eliminate friction, and turn strategy into real-world results.",
   info: [
     {
       fieldName: "Name",
@@ -55,7 +55,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Over the past decade I’ve led technology initiatives in manufacturing, public‑sector services, and utilities—driving large‑scale automation, cloud adoption, and data‑driven decision making. I thrive in high‑stakes environments where critical systems must remain resilient, spearheading projects that have cut manual workloads by double‑digit percentages while accelerating delivery cycles. Whether restoring mission‑critical infrastructure under tight deadlines or mentoring multidisciplinary teams through modernization roadmaps, my focus is always on turning complex technical challenges into clear business wins.",
+    "I lead high-impact technology initiatives across manufacturing, public services, and infrastructure—driving intelligent automation, cloud transformation, and data-informed execution. I specialize in turning complexity into clarity, reducing manual effort, accelerating delivery, and ensuring critical systems remain resilient. My focus: engineering solutions that create measurable, strategic business outcomes.",
   items: [
     {
       company: "Eaton Aerospace",
@@ -85,7 +85,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "I hold an engineering degree with a concentration in computing systems, where I cultivated a deep foundation in algorithms, network architecture, and secure software design. Complementing this core program, I pursued advanced coursework in modern full-stack development, asynchronous programming, and agile product delivery—building a mindset of continuous experimentation and lifelong learning that still guides my craft today.",
+    "I hold an engineering degree focused on Computing Systems, where I built a strong foundation in Algorithms, Network Architecture, and Secure Software Design. Alongside this core training, I deepened my expertise in AI Automation, Software Engineering, Asynchronous Programming, and Agile Product Delivery--Shaping a mindset rooted in Adaptability, Strategic Experimentation, and Continuous Improvement.",
   items: [
     {
       institution: "Online Course Platform",
@@ -114,7 +114,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "My expertise spans the full product lifecycle—from architecting scalable user interfaces and modeling relational data to scripting intelligent automations that bridge cloud services with on‑premise assets. I’m equally comfortable white‑boarding high‑level solution diagrams with stakeholders as I am rolling up my sleeves to optimize query performance, refine CI/CD pipelines, or prototype AI‑driven features. Colleagues count on me for translating ambitious ideas into dependable, maintainable systems that keep pace with rapidly evolving business needs.",
+    "I design and deploy intelligent systems that connect cloud platforms, automate workflows, and eliminate operational friction. From crafting front-end interfaces to building AI-driven automations, I bridge strategy and execution—delivering solutions that scale, adapt, and drive measurable growth. Colleagues rely on me  to transform complex processes into streamlined, maintainable systems that scale—and deliver measurable impact.",
   skillsList: [
     {
       icon: <FaJs />,
@@ -124,10 +124,10 @@ const skills = {
       icon: <SiNextdotjs />,
       name: "next.js",
     },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
+    // {
+    //   icon: <SiTailwindcss />,
+    //   name: "tailwind.css",
+    // },
     {
       icon: <FaPython />,
       name: "python",
@@ -144,14 +144,14 @@ const skills = {
       icon: <FaCss3 />,
       name: "css 3",
     },
-    {
-      icon: <FaMicrosoft />,
-      name: "Microsoft Power Platforms",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
+    // {
+    //   icon: <FaMicrosoft />,
+    //   name: "Microsoft Power Platforms",
+    // },
+    // {
+    //   icon: <FaNodeJs />,
+    //   name: "node.js",
+    // },
     {
       icon: <FaReact />,
       name: "react.js",

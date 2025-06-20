@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
 //components
@@ -8,6 +8,7 @@ import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import React from "react";
+import Button from "@/components/Button";
 
 const Home = () => {
   return (
@@ -18,31 +19,22 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Computer-Software Engineer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent">Hiram Arce</span>
+              Architect
+              <br />
+              <span className="text-accent">Momentum</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Seasoned technologist who drives high-impact software development,
-              automation, and digital transformation—seamlessly uniting strategy
-              and execution to spark measurable results and sustainable growth.
+              Strategic-Technologist Specializing in AI-Powered Automation and
+              Software Development. I design High-Impact Digital Systems that
+              free Growing Businesses and entrepreneurs from operational drag,
+              so they can scale with Clarity, Attract more Clients, and focus on
+              what truly drives growth.
             </p>
             {/** button & socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <a
-                  href="/assets/resume/ResumeHArce.pdf"
-                  download
-                  className="inline-flex items-center gap-2
-             px-6 py-3 rounded-md
-             hover:bg-accent hover:text-primary transition"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </a>
-              </Button>
+              <Link href="/contact">
+                <Button targetId="/contact" text="Let's Forge Impact" />
+              </Link>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

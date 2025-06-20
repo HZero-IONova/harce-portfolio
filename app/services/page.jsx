@@ -6,30 +6,30 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Intelligent Automation",
     description:
-      "Lightning‑fast, conversion‑focused websites built with modern frameworks—seamlessly responsive and engineered to turn visitors into loyal customers.",
+      "AI‑powered workflows and client-facing systems that eliminate repetitive tasks, automate lead generation, quoting, scheduling, and onboarding—freeing your business to scale with focus.",
     href: "",
   },
   {
     num: "02",
-    title: "Power Platforms",
+    title: "Software Engineering",
     description:
-      "Low‑code apps and automated workflows that slash manual effort and surface real‑time insights, all fully tailored to your unique business processes.",
+      "Elegant, high-performance applications and internal tools—designed end-to-end with modern frameworks like Next.js, Python, and SQL, to align with your business logic and user experience goals.",
     href: "",
   },
   {
     num: "03",
-    title: "SEO",
+    title: "System Integration",
     description:
-      "Data‑driven strategies that elevate your search rankings, amplify organic traffic, and position your brand exactly where your audience is looking.",
+      "Seamlessly connect tools into cohesive ecosystems that centralize operations and accelerate decision-making.",
     href: "",
   },
   {
     num: "04",
-    title: "IT Specialist",
+    title: "Strategic Tech Advisory",
     description:
-      "End‑to‑end technology stewardship—from infrastructure hardening to incident response—ensuring your systems stay secure, scalable, and relentlessly reliable.",
+      "Thoughtful technical guidance and custom-built digital infrastructures that empower entrepreneurs and growing companies to turn complexity into clarity—and scale with confidence.",
     href: "",
   },
 ];

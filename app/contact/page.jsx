@@ -20,7 +20,11 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const info = [
   { icon: <FaPhoneAlt />, title: "Phone", description: "(+52) 665 104 1623" },
   { icon: <FaEnvelope />, title: "Email", description: "rh.arce@outlook.com" },
-  { icon: <FaMapMarkerAlt />, title: "Address", description: "Tijuana, B.C.N" },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Location",
+    description: "Tijuana, B.C.N",
+  },
 ];
 
 /* --- Estado inicial formulario --- */
@@ -70,12 +74,13 @@ export default function ContactPage() {
               onSubmit={handleSubmit}
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
             >
-              <h3 className="text-4xl text-accent">Let's work together</h3>
+              <h3 className="text-4xl text-accent">
+                Let's Build Something Powerful
+              </h3>
 
               <p className="text-white/60">
-                Have a bold idea or a complex challenge? I turn vision into
-                reliable, high‑impact digital solutions—on time and on budget.
-                Reach out and let’s craft something remarkable.
+                Have a bold idea or a complex challenge? Let’s Architect the
+                Solution and release your Momentum—together..
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -107,25 +112,26 @@ export default function ContactPage() {
               </div>
 
               <Select onValueChange={(v) => setForm({ ...form, service: v })}>
-                <SelectValue placeholder="Select a service"></SelectValue>
+                {/* <SelectValue placeholder="Select a service"></SelectValue> */}
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="portfolio">
-                    Web Portfolio / Landing Page
-                  </SelectItem>
-                  <SelectItem value="pplatform">
-                    Microsoft Power Platform
+                  <SelectItem value="landingpage">Landing Page</SelectItem>
+                  <SelectItem value="aiautomation">
+                    Business Powered Automations
                   </SelectItem>
                   <SelectItem value="ecommerce">E‑commerce Site</SelectItem>
+                  <SelectItem value="strategicadvisory">
+                    Strategic Tech Advisory
+                  </SelectItem>
                 </SelectContent>
               </Select>
 
               <Textarea
                 name="message"
-                className="h-[180px]"
-                placeholder="Tell me about your project…"
+                className="h-[90px]"
+                placeholder="Tell me about your pain… We will Fix them."
                 value={form.message}
                 onChange={handleChange}
               />
