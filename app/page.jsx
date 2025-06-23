@@ -9,6 +9,7 @@ import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import React from "react";
 import Button from "@/components/Button";
+import ButtonDark from "@/components/ButtonDark";
 
 const Home = () => {
   return (
@@ -34,6 +35,9 @@ const Home = () => {
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link href="/contact">
                 <Button targetId="/contact" text="Let's Forge Impact" />
+              </Link>
+              <Link href="/services">
+                <ButtonDark targetId="/services" text="Services" />
               </Link>
               <div className="mb-8 xl:mb-0">
                 <Social
