@@ -138,13 +138,20 @@ export default function ContactPage() {
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Landing Page">Landing Page</SelectItem>
                   <SelectItem value="AI Automation">
-                    Business Powered Automations
+                    🔁 Strategic Business Automation
                   </SelectItem>
-                  <SelectItem value="E-commerce">E‑commerce Site</SelectItem>
+                  <SelectItem value="Web Services">
+                    🌐 High-Impact Web Presence
+                  </SelectItem>
+                  <SelectItem value="E-commerce">
+                    🛒 Revenue-Driven Online Stores
+                  </SelectItem>
                   <SelectItem value="Strategic Advisory">
-                    Strategic Tech Advisory
+                    🧠 Technical Strategy & Innovation
+                  </SelectItem>
+                  <SelectItem value="Custom">
+                    🧩 Not sure yet — I need guidance
                   </SelectItem>
                 </SelectContent>
               </Select>
