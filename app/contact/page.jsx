@@ -101,8 +101,8 @@ export default function ContactPage() {
               </h3>
 
               <p className="text-white/60">
-                Have a bold idea or a complex challenge? Let’s Architect the
-                Solution and release your Momentum—together.
+                Have a bold idea or a complex challenge? Let’s Architect Clarity
+                and Advance with Precision.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -21,14 +21,14 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Architect
               <br />
-              <span className="text-accent">Momentum</span>
+              <span className="text-accent">Clarity</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Strategic-Technologist Specializing in AI-Powered Automation and
-              Software Development. I design High-Impact Digital Systems that
-              free Growing Businesses and entrepreneurs from operational drag,
-              so they can scale with Clarity, Attract more Clients, and focus on
-              what truly drives growth.
+              I'm H. Arce, Strategic-Technologist Specializing in AI-Powered
+              Automation and Software Development. I design High-Impact Digital
+              Systems that free Growing Businesses and Entrepreneurs from
+              operational drag, so they can scale with Clarity, Attract more
+              Clients, and focus on what truly drives growth.
             </p>
             {/** button & socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
