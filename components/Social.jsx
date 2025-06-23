@@ -11,7 +11,7 @@ import {
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/HZero-IONova" },
   { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/rhag" },
-  { icon: <FaInstagram />, path: "https://www.instagram.com/ionova.io/" },
+  // { icon: <FaInstagram />, path: "https://www.instagram.com/ionova.io/" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
