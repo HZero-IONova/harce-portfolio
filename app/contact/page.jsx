@@ -159,7 +159,7 @@ export default function ContactPage() {
               <Textarea
                 name="pain"
                 className="h-[90px]"
-                placeholder="Tell me about your pain… We will Fix them."
+                placeholder="Tell me about your pains… I will Fix them."
                 value={form.pain}
                 onChange={handleChange}
               />

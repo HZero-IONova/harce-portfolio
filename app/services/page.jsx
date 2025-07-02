@@ -8,7 +8,7 @@ const services = [
     num: "01",
     title: "Intelligent Automation",
     description:
-      "AI‑powered workflows and client-facing systems that eliminate repetitive tasks, automate lead generation, quoting, scheduling, and onboarding—freeing your business to scale with focus.",
+      "AI‑powered workflows and client-facing systems that eliminate repetitive tasks, Automate Lead Generation, Instant Quoting, Inventory Management, Meetings Scheduling, and Onboarding—Freeing your business to scale with focus.",
     href: "",
   },
   {
