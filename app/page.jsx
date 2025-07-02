@@ -19,10 +19,10 @@ const Home = () => {
           {/** text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Computer-Software Engineer</span>
-            <h1 className="h1 mb-6">
-              Architect
+            <h1 className="h2 mb-6">
+              Outcome-Driven.
               <br />
-              <span className="text-accent">Clarity</span>
+              <span className="text-accent">Results-Proven.</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I'm H. Arce, Strategic-Technologist Specializing in AI-Powered
