@@ -34,6 +34,8 @@ const initialForm = {
   phone: "",
   service: "",
   pain: "",
+  company: "",
+  budget: "",
 };
 
 export default function ContactPage() {
@@ -44,31 +46,28 @@ export default function ContactPage() {
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
+  // 👉 Manejador específico para budget que sólo deja números y un punto
+  const handleBudgetChange = (e) => {
+    // Remueve TODO lo que no sea dígito o punto
+    let clean = e.target.value.replace(/[^0-9.]/g, "");
+    // Si hay más de un punto, deja sólo el primero
+    const parts = clean.split(".");
+    if (parts.length > 2) {
+      clean = parts.shift() + "." + parts.join("");
+    }
+    setForm((prev) => ({ ...prev, budget: clean }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      await fetch(
-        "https://hook.us2.make.com/7o9pix8jaozwew1ju39jntekyvc6n4kh",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            firstName: form.firstName,
-            lastName: form.lastName,
-            email: form.email,
-            phone: form.phone,
-            service: form.service,
-            pain: form.pain,
-            date: new Date().toISOString(),
-            status: "New",
-            messageAI: "",
-            messageSent: false,
-          }),
-        }
-      );
-
+      await fetch("/api/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
       setSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -127,9 +126,23 @@ export default function ContactPage() {
                 />
                 <Input
                   name="phone"
+                  type="phone"
                   placeholder="Phone"
                   value={form.phone}
                   onChange={handleChange}
+                />
+                <Input
+                  name="company"
+                  placeholder="Company"
+                  value={form.company}
+                  onChange={handleChange}
+                />
+                <Input
+                  name="budget"
+                  type="number" // mantenemos number para validación nativa
+                  placeholder="Budget (USD)"
+                  value={form.budget}
+                  onChange={handleBudgetChange}
                 />
               </div>
 

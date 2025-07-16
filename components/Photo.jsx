@@ -22,7 +22,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <img
-            src="/assets/profilePhoto.jpg"
+            src="/assets/PhotoCV.jpg"
             alt=""
             className="object-contain rounded-full absolute inset-0 w-full h-full"
           />
